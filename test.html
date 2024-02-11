@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Production and CO2 Chart</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #combochart {
+      height: 500px;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <!-- Navbar content -->
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body" id="combochart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawVisualization);
+
+    function drawVisualization() {
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Total USA Operated Production (MMBOE)', 'CO2 Emitted from USA Operations (thousand tonnes)'],
+        ['2018', 240, 5000],
+        ['2019', 261, 5900],
+        ['2020', 219, 4600],
+        ['2021', 412, 6200],
+        ['2022', 445, 6129]
+      ]);
+
+      var options = {
+        title: 'Production (in bbl/oil equivalents) and CO2 from Operations',
+        vAxes: {
+          0: {title: 'Millions of Barrels of Oil Equivalent (MMBOE)'},
+          1: {title: 'Thousand Tonnes'}
+        },
+        hAxis: {title: 'Year'},
+        seriesType: 'bars',
+        series: {
+          0: {targetAxisIndex: 0},
+          1: {targetAxisIndex: 1, type: 'line', color: 'blue'}
+        },
+        colors: ['red', 'grey']
+      };
+
+      var chart = new google.visualization.ComboChart(document.getElementById('combochart'));
+      chart.draw(data, options);
+    }
+  </script>
+</body>
+</html>
