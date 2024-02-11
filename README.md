@@ -1,5 +1,6 @@
 # EdgeCasesCodeRED
-ConocoPhilips Submission
+The Edge Cases CodeRED Genesis 2024 submission.
+For our submission, we took the ConocoPhilips track to create an application that would track/monitor sustainability by geographical locations that is managed/run by ConocoPhillips.
 
 We would like to...
     1. have an interactive GUI for displaying data
