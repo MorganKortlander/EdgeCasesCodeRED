@@ -23,3 +23,5 @@ Have fact sheets for USA:
         mouse over points on graph to show years? Nah, just have on the bottom
     compare the CP GHG outputs for the USA as a whole from sustainability reports (and other stuff?) compared to the whole of the CP performance reported in sustainability?
     *Also try to link to energy demand/usage, and per capita usage
+
+Data notes: folded NGL (nat gas liquids) into nat gas for simplicity
