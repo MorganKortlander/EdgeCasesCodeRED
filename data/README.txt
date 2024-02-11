@@ -13,3 +13,4 @@ stateEmissionMassbySector - how much C02 output by sector
 statePerCapitaCO2fromEnergy - CO2 output from
     Table 6. Per capita energy-related carbon dioxide emissions by state (2005–2016)
     In metric tons carbon dioxide per person
+
