@@ -13,3 +13,7 @@ stateEmissionMassbySector - how much C02 output by sector
 statePerCapitaCO2fromEnergy - CO2 output from
     Table 6. Per capita energy-related carbon dioxide emissions by state (2005–2016)
     In metric tons carbon dioxide per person
+
+lower48Output.csv - shows production for CP in lower 48, with emphasis on areas of interest (AoI), Permian, Eagleford, and Bakken. Has breakdown for type of production (crude oil vs natural gas vs natural gas liquids)
+
+USA_GHG_performance_data.csv - shows sustainability data (greenhouse gases and other undesired effects) for all of USA. Shows total production for CP in USA (including *Alaska*, not just lower 48)
